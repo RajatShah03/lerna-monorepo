@@ -1,16 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import { Button } from "core"
+import { Button } from "core";
 
 export function App() {
   return (
     <div className="App">
-      Hello from Team A
+      Hello from Lib A
       <Button />
     </div>
   );
 }
-
-
