@@ -1,8 +1,13 @@
 {
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "packages": ["./core", "./main", "./lib-a", "./lib-b"],
-  "version": "1.0.1-beta.3",
+  "packages": [
+    "./core",
+    "./main",
+    "./lib-a",
+    "./lib-b"
+  ],
+  "version": "2.0.0-beta.0",
   "command": {
     "publish": {
       "conventionalCommits": true,
@@ -10,7 +15,9 @@
     },
     "version": {
       "message": "chore(release): publish",
-      "allowBranch": ["main"]
+      "allowBranch": [
+        "main"
+      ]
     }
   }
 }
