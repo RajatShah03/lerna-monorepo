@@ -1,6 +1,6 @@
 {
   "name": "main",
-  "version": "1.0.1-beta.2",
+  "version": "1.0.1-beta.3",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -11,7 +11,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "core": "^1.0.1-beta.1",
-    "lib-a": "^1.0.1-beta.1",
+    "lib-a": "^1.0.1-beta.3",
     "lib-b": "^1.0.1-beta.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
