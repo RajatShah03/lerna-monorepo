@@ -1,5 +1,5 @@
 {
-  "name": "team-a",
+  "name": "lib-a",
   "version": "1.0.0",
   "private": true,
   "main": "src/index.tsx",
