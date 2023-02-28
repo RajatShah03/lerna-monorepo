@@ -5,12 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0-beta.1](https://github.com/RajatShah03/lerna-monorepo/compare/v2.0.0-beta.0...v2.0.0-beta.1) (2023-02-28)
 
-**Note:** Version bump only for package main
-
-
-
-
-
-# [2.0.0-beta.0](https://github.com/RajatShah03/lerna-monorepo/compare/v1.0.1-beta.3...v2.0.0-beta.0) (2023-02-28)
-
-**Note:** Version bump only for package main
+**Note:** Version bump only for package lib-a
