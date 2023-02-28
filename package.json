@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "./core",
+      "./main",
+      "./lib-a",
+      "./lib-b"
+    ]
+  },
+  "scripts": {
+    "start": "lerna run --scope={main,lib-a} start --stream",
+    "test": "lerna run test --concurrency 3"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
