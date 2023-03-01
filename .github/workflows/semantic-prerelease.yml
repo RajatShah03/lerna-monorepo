@@ -23,13 +23,13 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           fetch-depth: 0
-        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
 
       - name: "Generate new version"
         env:
           PAT: ${{ secrets.PAT }}
         run: |
           yarn
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
           lerna version --conventional-prerelease --preid beta --no-changelog --no-git-tag-version
 
           git config --global user.email "srajat0301@gmail.com"
