@@ -7,7 +7,7 @@
     "./lib-a",
     "./lib-b"
   ],
-  "version": "2.0.0-beta.7",
+  "version": "2.0.0-beta.8",
   "command": {
     "publish": {
       "conventionalCommits": true,
