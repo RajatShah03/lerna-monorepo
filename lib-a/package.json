@@ -1,6 +1,6 @@
 {
   "name": "lib-a",
-  "version": "2.0.0-beta.20",
+  "version": "2.0.0-beta.21",
   "private": false,
   "main": "src/index.tsx",
   "dependencies": {
@@ -11,7 +11,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "core": "^2.0.0-beta.20",
+    "core": "^2.0.0-beta.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
