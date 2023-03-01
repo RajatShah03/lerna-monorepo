@@ -1,0 +1,46 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Semantic prerelease
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
+
+      - name: "Generate new version"
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          yarn
+          lerna version --conventional-prerelease --preid beta --no-changelog --no-git-tag-version
+
+          if [[ `git status --porcelain` ]]; then
+            # Changes
+            echo "Publishing new version..."
+            git config --global user.name  "semantic-release-bot"
+            git add -u
+            git commit -m "chore(release): publish" -n
+            git tag -a @latest --force -m 'chore(release): publish'
+            git push origin @latest --force
+            git push
+          else
+            # No changes
+            echo "No version changes detected"
+          fi
