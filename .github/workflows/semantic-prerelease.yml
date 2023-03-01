@@ -31,6 +31,9 @@ jobs:
           yarn
           lerna version --conventional-prerelease --preid beta --no-changelog --no-git-tag-version
 
+          git config --global user.email "srajat0301@gmail.com"
+          git config --global user.name "Rajat Shah"
+
           if [[ `git status --porcelain` ]]; then
             # Changes
             echo "Publishing new version..."
