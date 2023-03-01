@@ -36,8 +36,12 @@ jobs:
 
           if [[ `git status --porcelain` ]]; then
             # Changes
-            $packageVersion = grep lerna.json version
-            lerna version $packageVersion --force-publish=*
+            PACKAGE_VERSION=$(cat lerna.json \
+            | grep version \
+            | head -1 \
+            | awk -F: '{ print $2 }' \
+            | sed 's/[",]//g')
+            lerna version $PACKAGE_VERSION --force-publish=*
             echo "Publishing new version..."
             git config --global user.name  "semantic-release-bot"
             git add -u
