@@ -41,7 +41,7 @@ jobs:
             | head -1 \
             | awk -F: '{ print $2 }' \
             | sed 's/[",]//g')
-            lerna version $PACKAGE_VERSION --force-publish=*
+            lerna version $PACKAGE_VERSION --force-publish=* --no-changelog --no-git-tag-version
             echo "Publishing new version..."
             git config --global user.name  "semantic-release-bot"
             git add -u
